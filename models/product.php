@@ -18,5 +18,18 @@
                     $this->is_available = $_is_available;
                     $this->description = $_description;
                 }
+                
+                public function getProductDetails(){
+                    $string = 'Prezzo:'.$this->price.'&euros; <br>';
+        
+                    if($this->is_available){
+                        $string.= "Disponibilità: ".$this->quantity;
+                    }
+                    else{
+                        $string.= "Prodotto non disponibile";
+                    }
+        
+                    return $string;
+                }
             }
 ?>
