@@ -16,6 +16,10 @@
             public function getCalories(){
                 return $this->calories;
             }
+
+            public function getClassName(){
+                return get_class();
+            }
     
         }
 ?>
