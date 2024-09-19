@@ -4,7 +4,7 @@
         class Food extends Product {
             protected $calories;
     
-            function __construct($_name, $_image, category $_category, $_price, $_quantity, $_is_available, $_description)
+            function __construct($_name, $_image, Category $_category, $_price, $_quantity, $_is_available, $_description)
             {
                 parent::__construct($_name, $_image, $_category, $_price, $_quantity, $_is_available, $_description);
             }
