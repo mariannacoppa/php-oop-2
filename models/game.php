@@ -4,7 +4,7 @@
     class Game extends Product{
         protected $material;
 
-        function __construct($_name, $_image, $_price, $_quantity, $_is_available, category $_category)
+        function __construct($_name, $_image, $_price, $_quantity, $_is_available, Category $_category)
         {
             parent::__construct($_name, $_image, $_price, $_quantity, $_is_available, $_category);
         }
