@@ -8,7 +8,7 @@
                 public $description;
                 public $category;
         
-                function __construct($_name, $_image, $_category, $_price, $_quantity, $_is_available, $_description)
+                function __construct($_name, $_image, Category $_category, $_price, $_quantity, $_is_available, $_description)
                 {
                     $this->name = $_name;
                     $this->image = $_image;
@@ -18,7 +18,7 @@
                     $this->is_available = $_is_available;
                     $this->description = $_description;
                 }
-                
+
                 public function getProductDetails(){
                     $string = 'Prezzo:'.$this->price.'&euros; <br>';
         
