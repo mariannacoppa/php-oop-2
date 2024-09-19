@@ -12,6 +12,7 @@
 
     $product = new Product('Collare', 'https://picsum.photos/200/300', $dog, 13.00, 20, true, 'Lorem ipsum dolor sit amet');
     $product->description = "Lorem ipsum dolor";
+
     $food = new Food('Croccantini', 'https://picsum.photos/200/300', $dog, 10.00, 20, true, 'Lorem ipsum dolor sit amet');
     $food->setCalories(500);
     
@@ -21,5 +22,11 @@
     $bed = new Bed('Ciambella', 'https://picsum.photos/200/300', 18.00, 0, false, $cat);
     $bed->setSize('50 x 20 x 40');
     
-    var_dump($product->getProductDetails());
+    $products = [
+        $product, 
+        $game, 
+        $bed, 
+        $food
+    ];
+    //var_dump($product->getProductDetails());
 ?>
