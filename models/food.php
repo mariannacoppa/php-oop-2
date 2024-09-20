@@ -1,25 +1,24 @@
 <?php
-        require_once __DIR__.'/product.php';
+    require_once __DIR__.'/product.php';
 
-        class Food extends Product {
-            protected $calories;
-    
-            function __construct($_name, $_image, Category $_category, $_price, $_quantity, $_is_available, $_description)
-            {
-                parent::__construct($_name, $_image, $_category, $_price, $_quantity, $_is_available, $_description);
-            }
-    
-            public function setCalories($_calories){
-                $this->calories = $_calories;
-            }
-    
-            public function getCalories(){
-                return $this->calories;
-            }
+    class Food extends Product {
+        protected $calories;
 
-            public function getClassName(){
-                return get_class();
-            }
-    
+        function __construct($_name, $_image, $_category, $_price, $_quantity, $_is_available, $_description)
+        {
+            parent::__construct($_name, $_image, $_category, $_price, $_quantity, $_is_available, $_description);
         }
+
+        public function setCalories($_calories){
+            $this->calories = $_calories;
+        }
+
+        public function getCalories(){
+            return $this->calories;
+        }
+
+        public function getClassName(){
+            return get_class($this);
+        }
+    }
 ?>

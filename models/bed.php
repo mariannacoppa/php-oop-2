@@ -4,8 +4,8 @@
     class Bed extends Product{
         protected $size;
 
-        function __construct($_name, $_image, $_price, $_quantity, $_is_available, Category $_category){
-            parent::__construct($_name, $_image, $_price, $_quantity, $_is_available, $_category);
+        function __construct($_name, $_image, $_price, $_quantity, $_is_available, $_category, $_description){
+            parent::__construct($_name, $_image, $_price, $_quantity, $_is_available, $_category, $_description);
         }
 
         public function setSize($_size){
@@ -17,7 +17,8 @@
         }
 
         public function getClassName(){
-            return get_class();
+            return get_class($this);
         }
+
     }
 ?>
