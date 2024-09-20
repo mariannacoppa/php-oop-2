@@ -20,10 +20,15 @@
         }
 
         public function getProductDetails(){
-            $string = 'Prezzo: '.$this->price.' &euro; <br>';
+            try{
+                $string = 'Prezzo:'.$this->price.'&euro; <br>';
+                //throw new Exception('Il prezzo deve contenere caratteri numerici');
+            }catch(Exception $e){
+                $string = 'Prezzo non disponibile';
+            }
 
             if($this->is_available){
-                $string.= "Disponibilità: ".$this->quantity.' unità';
+                $string.= "Disponibilità: ".$this->quantity;
             }
             else{
                 $string.= "Prodotto non disponibile";
